@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle-Buys</title>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vehicle-Buys</h1>
+        <button id="add-button" type="button">+ Додати авто</button>
+    </header>
+    <main>
+        <inputtype="text"id="search" placeholder="Пошук автомобіля...">
+        <form id="car-form" hidden>
+            <h2>Нове оголошення</h2>
+            <input id="car-name" placeholder="Марка та модель" required>
+            <input id="car-year" type="number" placeholder="Рік випуску" min="1900" max="2100" required>
+            <input id="car-engine" placeholder="Двигун, наприклад 2.5 I4" required>
+            <input id="car-transmission" placeholder="Коробка передач, наприклад Automatic" required>
+            <input id="car-price" type="number" placeholder="Ціна в доларах" min="1" required>
+            <input id="car-image" type="url" placeholder="Посилання на фото (необов'язково)">
+            <button type="submit">Опублікувати авто</button>
+        </form>
+        <div class="cars-grid" id="cars-grid">
+            <article class="car-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/2020_Toyota_Corolla_LE_standard_front%2C_5.25.19.jpg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original"alt="Toyota Corolla">
+                <div class="car-content">
+                    <h2>Toyota Corolla</h2>
+                    <p class="car-year">2018 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>2.5 I4</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">12 500 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/2018_Ford_Mustang_GT_5.0.jpg/330px-2018_Ford_Mustang_GT_5.0.jpg?utm_source=ru.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"alt="Ford Mustang">
+                <div class="car-content">
+                    <h2>Ford Mustang</h2>
+                    <p class="car-year">2016 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>3.7 V6</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">35 000 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+            <img src="https://cdn-thumbor.autodealersdigital.com/unsafe/fit-in/1000x750/filters:upscale():max_bytes(500000):quality(100):fill(blur):sharpen(0.7,0.5,true):format(jpg)/103056/9552693/189841745117841.jpg"alt="Dodge Charger SRT">
+                <div class="car-content">
+                    <h2>Dodge Charger SRT</h2>
+                    <p class="car-year">2013 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>6.4 V8</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">65 000 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/BMW_M3_Competition_%28G80%29_IMG_4041.jpg/330px-BMW_M3_Competition_%28G80%29_IMG_4041.jpg?utm_source=ru.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"alt="BMW M3">
+                <div class="car-content">
+                    <h2>BMW M3</h2>
+                    <p class="car-year">2020 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>3.0 I6</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">85 000 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.HcrWOnWV22XMomXn7UqHOQHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"alt="Mercedes-Benz G-Class">
+                <div class="car-content">
+                    <h2>Mercedes-Benz G-Class</h2>
+                    <p class="car-year">2018 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>4.0 V8</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">120 000 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/2009-2010_Nissan_GT-R_%28R35%29_coupe_01.jpg/1920px-2009-2010_Nissan_GT-R_%28R35%29_coupe_01.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"alt="Nissan GT-R">
+                <div class="car-content">
+                    <h2>Nissan GT-R</h2>
+                    <p class="car-year">2010 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>3.8 V6</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">32 500 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5vT6LEsPIXnTaJnVjniwt7rFPw_2s8uTzycG5SsYfiYwBH0b8wJCWuDo&s=10"alt="Audi R8">
+                <div class="car-content">
+                    <h2>Audi R8</h2>
+                    <p class="car-year">2017 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>5.2 V10</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">78 000 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.4lrrqrqwjvyckZ5HTy2W-AHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"alt="Chevrolet Corvette">
+                <div class="car-content">
+                    <h2>Chevrolet Corvette</h2>
+                    <p class="car-year">2013 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>7.0 V8</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Manual</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">50 000 $</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
