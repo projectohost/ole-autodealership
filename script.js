@@ -6,7 +6,6 @@ const categoryButtons = document.querySelectorAll(".category");
 
 let activeCategory = "all";
 
-// Определяем категорию автомобиля по названию
 function getCarCategory(name) {
     const carName = name.toLowerCase();
 
@@ -15,7 +14,8 @@ function getCarCategory(name) {
         "x5", "x6", "x7", "rav4", "highlander",
         "land cruiser", "prado", "tahoe", "suburban",
         "explorer", "tucson", "sportage", "suv",
-        "escalade", "touareg", "grand cherokee", "позашляховик", "внедорожник"
+        "escalade", "touareg", "grand cherokee", 
+        "envision", "позашляховик", "внедорожник"
     ];
 
     const sportKeywords = [
@@ -24,7 +24,8 @@ function getCarCategory(name) {
         "nissan z", "camaro", "challenger",
         "charger hellcat", "911", "porsche",
         "audi r8", "ferrari", "lamborghini",
-        "mclaren", "speedster", "sport", "купе", "спорткар"
+        "mclaren", "speedster", "lfa", "sport", 
+        "купе", "спорткар"
     ];
 
     const sedanKeywords = [
@@ -33,7 +34,7 @@ function getCarCategory(name) {
         "mercedes-benz c", "mercedes-benz e",
         "nissan maxima", "altima", "sentra",
         "dodge charger", "passat", "jetta",
-        "sedan", "седан"
+        "300", "sedan", "седан"
     ];
 
     if (suvKeywords.some(word => carName.includes(word))) {
@@ -48,11 +49,9 @@ function getCarCategory(name) {
         return "sedan";
     }
 
-    // Если категорию определить не удалось
     return "other";
 }
 
-// Назначаем категории уже существующим карточкам
 function initializeCarCategories() {
     document.querySelectorAll(".car-card").forEach(card => {
         const title = card.querySelector("h2");
@@ -63,7 +62,6 @@ function initializeCarCategories() {
     });
 }
 
-// Поиск и фильтрация по категории
 function searchCars() {
     const query = search.value.toLowerCase().trim();
 
@@ -80,7 +78,6 @@ function searchCars() {
     });
 }
 
-// Переключение категорий
 categoryButtons.forEach(button => {
     button.addEventListener("click", () => {
         activeCategory = button.dataset.category;
@@ -93,7 +90,6 @@ categoryButtons.forEach(button => {
     });
 });
 
-// Показать или скрыть форму добавления авто
 addButton.addEventListener("click", () => {
     form.hidden = !form.hidden;
 
@@ -105,7 +101,6 @@ addButton.addEventListener("click", () => {
     }
 });
 
-// Создание элемента характеристики
 function createSpec(label, value) {
     const item = document.createElement("div");
     item.className = "spec";
@@ -121,7 +116,6 @@ function createSpec(label, value) {
     return item;
 }
 
-// Добавление нового автомобиля
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -146,14 +140,11 @@ form.addEventListener("submit", function(event) {
         return;
     }
 
-    // Создаём карточку
     const card = document.createElement("article");
     card.className = "car-card";
 
-    // Автоматически определяем категорию
     card.dataset.category = getCarCategory(name);
 
-    // Фото
     const img = document.createElement("img");
     img.src = image || "https://placehold.co/600x350?text=Car";
     img.alt = name;
@@ -163,7 +154,6 @@ form.addEventListener("submit", function(event) {
         this.src = "https://placehold.co/600x350?text=Car";
     };
 
-    // Содержимое карточки
     const content = document.createElement("div");
     content.className = "car-content";
 
@@ -174,7 +164,6 @@ form.addEventListener("submit", function(event) {
     yearText.className = "car-year";
     yearText.textContent = year + " рік";
 
-    // Характеристики
     const specs = document.createElement("div");
     specs.className = "car-specs";
 
@@ -183,7 +172,6 @@ form.addEventListener("submit", function(event) {
         createSpec("Коробка передач", transmission)
     );
 
-    // Цена
     const bottom = document.createElement("div");
     bottom.className = "car-bottom";
 
@@ -194,26 +182,19 @@ form.addEventListener("submit", function(event) {
 
     bottom.append(priceText);
 
-    // Собираем карточку
     content.append(title, yearText, specs, bottom);
     card.append(img, content);
 
-    // Добавляем в начало списка
     grid.prepend(card);
 
-    // Очищаем форму
     form.reset();
     form.hidden = true;
 
-    // Обновляем отображение с учётом активной категории и поиска
     searchCars();
 });
 
-// Инициализация
 initializeCarCategories();
 
-// Поиск при вводе текста
 search.addEventListener("input", searchCars);
 
-// Первоначальное отображение
 searchCars();

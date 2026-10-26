@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+    <title>Vehicle-Buys</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle-Buys</title>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Vehicle-Buys</h1>
-        <button id="add-button" type="button">+ Додати авто</button>
     </header>
 <main>
     <section class="hero">
@@ -36,18 +35,46 @@
             </div>
             <button id="add-button" type="button">+ Додати авто</button>
         </div>
-        <div class="category-list">
-            <button class="category active" data-category="all">Усі автомобілі</button>
-            <button class="category" data-category="sport">🏎️ Спорткари</button>
-            <button class="category" data-category="sedan">🚘 Седани</button>
-            <button class="category" data-category="suv">🚙 Позашляховики</button>
-        </div>
+      <div class="category-list">
+     <button class="category active" data-category="all">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 11l2-5h10l2 5M3 13l2-2h14l2 2v5h-3v-2H6v2H3z"/>
+            <circle cx="7.5" cy="14" r="1"/>
+            <circle cx="16.5" cy="14" r="1"/>
+        </svg>
+        <span>Усі автомобілі</span>
+    </button>
+    <button class="category" data-category="sport">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 14l2-4 4-2h7l4 3 2 1v4h-3M3 16v-2zm4 0h8"/>
+            <circle cx="6.5" cy="15.5" r="2"/>
+            <circle cx="17" cy="15.5" r="2"/>
+        </svg>
+        <span>Спорткари</span>
+    </button>
+    <button class="category" data-category="sedan">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 13l2-4 4-3h6l4 3 2 4v4h-3M3 17v-4zm4 0h8"/>
+            <circle cx="6.5" cy="15.5" r="2"/>
+            <circle cx="17" cy="15.5" r="2"/>
+        </svg>
+        <span>Седани</span>
+    </button>
+    <button class="category" data-category="suv">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 12l2-5h11l4 5 1 2v4h-3M3 18v-4zm4 0h8"/>
+            <circle cx="6.5" cy="15.5" r="2"/>
+            <circle cx="17" cy="15.5" r="2"/>
+         </svg>
+         <span>Позашляховики</span>
+        </button>
+       </div> 
         <form id="car-form" hidden>
             <h2>Нове оголошення</h2>
             <input id="car-name" placeholder="Марка та модель" required>
             <input id="car-year" type="number" placeholder="Рік випуску" min="1900" max="2100" required>
-            <input id="car-engine" placeholder="Двигун, наприклад 2.5 I4" required>
-            <input id="car-transmission" placeholder="Коробка передач, наприклад Automatic" required>
+            <input id="car-engine" placeholder="Двигун" required>
+            <input id="car-transmission" placeholder="Коробка передач" required>
             <input id="car-price" type="number" placeholder="Ціна в доларах" min="1" required>
             <input id="car-image" type="url" placeholder="Посилання на фото (необов'язково)">
             <button type="submit">Опублікувати авто</button>
@@ -261,7 +288,7 @@
                     <div class="car-specs">
                         <div class="spec">
                             <span>Двигун</span>
-                            <strong>3.6 V6</strong>
+                            <strong>5.7 V8</strong>
                         </div>
                         <div class="spec">
                             <span>Коробка передач</span>
@@ -290,6 +317,106 @@
                     </div>
                     <div class="car-bottom">
                         <span class="price">125 000 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+            <img src="https://th.bing.com/th/id/OIP.HCyy4EMq4b10z8GVkpNWvgHaEK?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"alt="Lamborghini Huracán">
+                <div class="car-content">
+                    <h2>Lamborghini Huracán</h2>
+                    <p class="car-year">2021 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>5.2 V10</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">400 000 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+            <img src="https://www.hongliyangzhi.com/manufacturers/honda/honda-accord/honda-accord-4-door-sport/honda-accord-4-door-sport-9.jpg"alt="Honda Accord">
+                <div class="car-content">
+                    <h2>Honda Accord</h2>
+                    <p class="car-year">2013 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>3.5 V6</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">18 000 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.5Bq6MIhtrUQFpxvwXP7JjQHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"alt="Lexus LFA">
+                <div class="car-content">
+                    <h2>Lexus LFA</h2>
+                    <p class="car-year">2011 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>4.8 V10</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">250 000 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+            <img src="https://cdn-fastly.autoguide.com/media/2023/07/02/13457110/buick-envision-review-specs-pricing-features-videos-and-more.jpg?size=720x845&nocrop=1"alt="Buick Envision">
+                <div class="car-content">
+                    <h2>Buick Envision</h2>
+                    <p class="car-year">2023 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>2.0 I4</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">50 700 $</span>
+                    </div>
+                </div>
+            </article>
+                        <article class="car-card">
+            <img src="https://media.rerev.com/chrysler-300-years-to-avoid.webp?v=20260728b"alt="Chrysler 300">
+                <div class="car-content">
+                    <h2>Chrysler 300</h2>
+                    <p class="car-year">2022 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>3.6 V6</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">47 500 $</span>
                     </div>
                 </div>
             </article>
