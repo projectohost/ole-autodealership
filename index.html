@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -13,8 +12,36 @@
         <h1>Vehicle-Buys</h1>
         <button id="add-button" type="button">+ Додати авто</button>
     </header>
-    <main>
-        <inputtype="text"id="search" placeholder="Пошук автомобіля...">
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-label">VEHICLE-BUYS · АВТОМАРКЕТ</span>
+            <h2>Знайди своє<br><span>ідеальне авто.</span></h2>
+            <p>Вибирай. Порівнюй. Купуй. Твоя наступна машина вже чекає на тебе.</p>
+            <div class="hero-search">
+                <span>⌕</span>
+                <input type="text" id="search" placeholder="Введи марку або модель автомобіля...">
+            </div>
+            <div class="hero-buttons">
+                <a href="#cars-grid" class="hero-button">Переглянути авто →</a>
+                <span class="hero-note">🚘 Автомобілі на будь-який смак</span>
+            </div>
+        </div>
+    </section>
+    <section class="catalog">
+        <div class="catalog-heading">
+            <div>
+                <span class="section-label">НАШ КАТАЛОГ</span>
+                <h2>Знайди свою машину</h2>
+            </div>
+            <button id="add-button" type="button">+ Додати авто</button>
+        </div>
+        <div class="category-list">
+            <button class="category active" data-category="all">Усі автомобілі</button>
+            <button class="category" data-category="sport">🏎️ Спорткари</button>
+            <button class="category" data-category="sedan">🚘 Седани</button>
+            <button class="category" data-category="suv">🚙 Позашляховики</button>
+        </div>
         <form id="car-form" hidden>
             <h2>Нове оголошення</h2>
             <input id="car-name" placeholder="Марка та модель" required>
@@ -62,7 +89,7 @@
                         </div>
                     </div>
                     <div class="car-bottom">
-                        <span class="price">35 000 $</span>
+                        <span class="price">27 000 $</span>
                     </div>
                 </div>
             </article>
@@ -183,6 +210,86 @@
                     </div>
                     <div class="car-bottom">
                         <span class="price">50 000 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+            <img src="https://images.vehiclespecs.io/large/volkswagen-touareg-i-7l-phase-2-2006_2006-2010_suv_30307_ai.webp"alt="Volkswagen Touareg">
+                <div class="car-content">
+                    <h2>Volkswagen Touareg</h2>
+                    <p class="car-year">2010 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>6.0 W12</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">22 500 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Opel_Speedster_Blue.jpg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original"alt="Volkswagen Touareg">
+                <div class="car-content">
+                    <h2>Opel Speedster</h2>
+                    <p class="car-year">2005 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>2.2 I4</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Manual</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">35 000 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj6FNK26wAiXmbbDXJ1tkVNVK4tEi4-Su_rmtgZe-cReKgbwlnxddJr0OM&s=10"alt="Jeep Grand Cherokee">
+                <div class="car-content">
+                    <h2>Jeep Grand Cherokee</h2>
+                    <p class="car-year">2013 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>3.6 V6</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">45 000 $</span>
+                    </div>
+                </div>
+            </article>
+            <article class="car-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiGkO9rOpPnQxHw4ELz9L8kHMALWgj3CnDHgmI6oPdds57Knv8VSEMxJGi&s=10"alt="Caddilac Escalade">
+                <div class="car-content">
+                    <h2>Cadillac Escalade</h2>
+                    <p class="car-year">2016 рік</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <span>Двигун</span>
+                            <strong>6.2 V8</strong>
+                        </div>
+                        <div class="spec">
+                            <span>Коробка передач</span>
+                            <strong>Automatic</strong>
+                        </div>
+                    </div>
+                    <div class="car-bottom">
+                        <span class="price">125 000 $</span>
                     </div>
                 </div>
             </article>

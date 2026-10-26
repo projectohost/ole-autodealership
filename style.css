@@ -309,3 +309,196 @@ main {
         transition: none;
     }
 }
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 75px 55px;
+    margin: 30px auto 55px;
+    max-width: 1250px;
+    border-radius: 24px;
+    background:
+        linear-gradient(90deg, #111827 0%, #111827ee 48%, #11182755 100%),
+        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=85")
+        center 55% / cover;
+    color: white;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-label,
+.section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #f59e0b;
+}
+
+.hero h2 {
+    margin: 20px 0;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.12;
+    font-weight: 700;
+}
+
+.hero h2 span {
+    color: #f59e0b;
+}
+
+.hero p {
+    max-width: 490px;
+    color: #d1d5db;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.hero-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    padding: 8px 18px;
+    max-width: 540px;
+    min-height: 48px;
+    border-radius: 12px;
+    background: white;
+    color: #111827;
+    box-sizing: border-box;
+}
+
+.hero-search span {
+    font-size: 28px;
+}
+
+.hero-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: transparent;
+    color: #111827;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.hero-button {
+    padding: 14px 22px;
+    border-radius: 10px;
+    background: #f59e0b;
+    color: #111827;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.hero-button:hover {
+    background: #fbbf24;
+    transform: translateY(-2px);
+}
+
+.hero-note {
+    color: #e5e7eb;
+    font-size: 13px;
+}
+
+/* Каталог */
+.catalog {
+    max-width: 1250px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.catalog-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.catalog-heading h2 {
+    margin: 8px 0 0;
+    font-size: 30px;
+    color: #111827;
+}
+
+#add-button {
+    border: none;
+    border-radius: 10px;
+    padding: 14px 20px;
+    background: #111827;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#add-button:hover {
+    background: #374151;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.category {
+    padding: 11px 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: white;
+    color: #374151;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.category:hover,
+.category.active {
+    border-color: #111827;
+    background: #111827;
+    color: white;
+}
+
+/* Адаптация под телефон */
+@media (max-width: 600px) {
+    .hero {
+        padding: 40px 22px;
+        margin: 18px 12px 35px;
+        border-radius: 18px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .catalog {
+        padding: 0 14px;
+    }
+
+    .catalog-heading h2 {
+        font-size: 25px;
+    }
+}
