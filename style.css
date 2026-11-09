@@ -20,12 +20,14 @@ header {
     justify-content: space-between;
     gap: 15px;
     padding: 18px 6%;
-    border-color: #000000;
+    border-color: #ffffff;
     border-width: 0 0 1px;
+    background: linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.88))
 }
 
 h1 {
     margin: 0;
+    color: #ffffff;
     font-family: "Oswald", sans-serif;
     font-size: clamp(22px, 4vw, 32px);
     font-weight: 500;
