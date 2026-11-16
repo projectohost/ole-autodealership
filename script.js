@@ -37,6 +37,10 @@ function getCarCategory(name) {
         "300", "sedan", "седан"
     ];
 
+    const pickupKeywords = [
+        "sierra", "silverado", "f-150", "raptor"
+    ];
+
     if (suvKeywords.some(word => carName.includes(word))) {
         return "suv";
     }
@@ -47,6 +51,10 @@ function getCarCategory(name) {
 
     if (sedanKeywords.some(word => carName.includes(word))) {
         return "sedan";
+    }
+
+    if (pickupKeywords.some(word => carName.includes(word))) {
+        return "pickup";
     }
 
     return "other";
@@ -230,7 +238,7 @@ const carDetails = {
         fuel: "Бензин",
     },
 
-    "Open Speedster": {
+    "Opel Speedster": {
         engineType: "Атмосферний 4-циліндровий",
         fuel: "Бензин",
     },
@@ -267,6 +275,21 @@ const carDetails = {
 
     "Chrysler 300": {
         engineType: "Атмосферний V6",
+        fuel: "Бензин",
+    },
+
+    "GMC Sierra 1500": {
+        engineType: "Атмосферний V8",
+        fuel: "Бензин",
+    },
+
+    "Chevrolet Camaro": {
+        engineType: "Компресорний V8",
+        fuel: "Бензин",
+    },
+
+    "Rolls-Royce Ghost": {
+        engineType: "Бітурбіруваний V12",
         fuel: "Бензин",
     }
 };
@@ -564,7 +587,15 @@ grid.addEventListener("click", function(event) {
                 </div>
 
                 <div class="spec">
-                    <div class="spec-icon">🔩</div>
+                    <div class="spec-icon">
+                        <svg viewBox="0 0 24 24" width="27" height="27"
+                            fill="none" stroke="#f59e0b"
+                            stroke-width="1.7" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M4 9h3l2-3h6l2 3h3v9h-3l-2 2H9l-2-2H4z"/>
+                            <path d="M9 6V4h6v2M2 12H4M20 12h2M10 11h4v4h-4z"/>
+                        </svg>
+                    </div>
                     <div class="spec-text">
                         <span>Тип двигателя</span>
                         <strong>${safe(details.engineType)}</strong>

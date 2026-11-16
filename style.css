@@ -15,14 +15,13 @@ body {
 }
 
 header {
+    width: 100%;
+    padding: 25px 7%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 15px;
-    padding: 18px 6%;
-    border-color: #ffffff;
-    border-width: 0 0 1px;
-    background: linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.88))
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 h1 {
