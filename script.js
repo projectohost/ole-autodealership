@@ -15,7 +15,8 @@ function getCarCategory(name) {
         "land cruiser", "prado", "tahoe", "suburban",
         "explorer", "tucson", "sportage", "suv",
         "escalade", "touareg", "grand cherokee", 
-        "envision", "позашляховик", "внедорожник"
+        "envision", "freemont", "позашляховик", 
+        "внедорожник"
     ];
 
     const sportKeywords = [
@@ -24,8 +25,8 @@ function getCarCategory(name) {
         "nissan z", "camaro", "challenger",
         "charger hellcat", "911", "porsche",
         "audi r8", "ferrari", "lamborghini",
-        "mclaren", "speedster", "lfa", "sport", 
-        "купе", "спорткар"
+        "mclaren", "speedster", "lfa", "granturismo", 
+        "sport", "купе", "спорткар"
     ];
 
     const sedanKeywords = [
@@ -34,7 +35,8 @@ function getCarCategory(name) {
         "mercedes-benz c", "mercedes-benz e",
         "nissan maxima", "altima", "sentra",
         "dodge charger", "passat", "jetta",
-        "300", "sedan", "седан"
+        "continental", "300", "sedan", "ypsilon",
+        "седан"
     ];
 
     const pickupKeywords = [
@@ -290,6 +292,26 @@ const carDetails = {
 
     "Rolls-Royce Ghost": {
         engineType: "Бітурбіруваний V12",
+        fuel: "Бензин",
+    },
+
+    "Maserati GranTurismo": {
+        engineType: "Атмосферний V8",
+        fuel: "Бензин",
+    },
+
+    "Fiat Freemont": {
+        engineType: "Турбованний 4-циліндровий",
+        fuel: "Дизель",
+    },
+
+    "Lincoln Continental": {
+        engineType: "Турбованний V6",
+        fuel: "Бензин",
+    },
+
+    "Lancia Ypsilon": {
+        engineType: "Турбованний 3-циліндровий",
         fuel: "Бензин",
     }
 };
